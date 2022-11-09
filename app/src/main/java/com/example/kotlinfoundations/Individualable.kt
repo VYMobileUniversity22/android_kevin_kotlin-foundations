@@ -1,11 +1,8 @@
 package com.example.kotlinfoundations
 
-import kotlin.math.pow
-import kotlin.random.Random
-
 interface Individualable {
 
-    fun calculateBMI(weight:Int, height:Double): Int{
+    fun calculateBMI(weight: Double, height:Double): Int{
         val bmi: Double = weight.toDouble() / (height * height)
         return if (bmi < 18.5) {
             -1
