@@ -21,9 +21,8 @@ interface Individualable {
     }
 
     fun checkGender(gender: Char): Char {
-        return if(gender == 'M' || gender == 'F') 'M'
-        else gender
-
+        if(gender != 'M' && gender != 'F') return 'M'
+        return gender
     }
 
     fun String.toString(): String {
@@ -34,7 +33,5 @@ interface Individualable {
     fun generatePassport(): Int {
         return (10000000..99999999).random()
     }
-
-
 
 }
